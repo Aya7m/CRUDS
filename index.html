@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="w-75 mx-auto">
+                <h1>Product Manigment System</h1>
+               <div class="mt-4">
+                <label for="pn" class="mb-3">product name</label>
+                <input type="text" class="form-control" id="pn">
+                <span class="text-danger d-none" id="nameError">invalid product name</span>
+               </div>
+
+               <div class="mt-4">
+                <label for="pp" class="mb-3">product price</label>
+                <input type="number" class="form-control" id="pp">
+                <span class="text-danger d-none" id="priceError">invalid product price</span>
+               </div>
+
+
+               <div class="mt-4">
+                <label for="pc" class="mb-3" >product catagory</label>
+                <input type="text" class="form-control" id="pc">
+                <span class="text-danger d-none" id="catError">invalid product catagory</span>
+               </div>
+
+               <div class="mt-4">
+                <label for="pd" class="mb-3">product discription</label>
+                <input type="text" class="form-control" id="pd">
+                <span class="text-danger d-none" id="disError">invalid product discription</span>
+               </div>
+
+               <div class="py-5">
+                <button  onclick="addProduct()" id="submet" class="btn btn-outline-info  text-uppercase w-100 "> create</button>
+               
+               </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <section>
+        
+        <div class="container">
+            <div class="w-75 mx-auto">
+                <label for="search" class="mb-3">search product</label>
+                <input onkeyup="searchProduct(this.value)" type="text" id="search" class="form-control " placeholder="search">
+                
+                <table class="table table-striped mt-3 ">
+                    <thead>
+                        <tr>
+                            <th>index</th>
+                            <th>product Name</th>
+                            <th>product price</th>
+                            <th>product catagory</th>
+                            <th>product discription</th>
+                            <th>update</th>
+                            <th>delete</th>
+                        </tr>
+                        <tbody id="tebody">
+                            <!-- <tr>
+                                <td>1</td>
+                                <td>iphone</td>
+                                <td>50000</td>
+                                <td>phone</td>
+                                <td>good</td>
+                                <td><button class="btn btn-warning">update</button></td>
+                                <td><button class="btn btn-danger">delete</button></td>
+                            </tr> -->
+                        </tbody>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
